@@ -1,0 +1,51 @@
+*, *::before, *::after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  background-color: #dedede
+  font-family: Inter
+
+#root
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100vw
+  height: 100vh
+  flex-direction: column
+
+.container
+  display: flex
+  justify-content: space-around
+  align-items: center
+  width: 1100px
+  margin-bottom: 50px
+
+#root>div
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+button
+  position: relative
+  z-index: 1
+  top: 0px
+  padding: 20px 40px
+  font-size: 20px
+  border: none
+  background: rgba(255, 255, 255, .4)
+  cursor: pointer
+  outline: none
+  transition: background .3s, top .1s
+
+button:hover
+  background: rgba(255, 255, 255, .6)
+
+button:active
+  top: 7px
+
+.color-box
+  width: 200px
+  height: 200px
