@@ -67,8 +67,13 @@ small {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 0 3em;
-  grid-template-areas: ". . big-image big-image big-image big-image" "small-image small-image big-image big-image big-image big-image" "small-image small-image big-image big-image big-image big-image" ". . big-image big-image big-image big-image";
+  grid-template-areas:
+  ". . . . . ."
+  "small-image small-image small-image big-image big-image big-image"
+  "small-image small-image small-image big-image big-image big-image"
+  ". . . . . .";
   transition: all .3s;
+  text-align: center;
 
   & > div {
     padding: 50px;
@@ -76,7 +81,24 @@ small {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
+}
+
+.expand {
+  grid-template-areas:
+  ". . big-image big-image big-image big-image"
+  "small-image small-image big-image big-image big-image big-image"
+  "small-image small-image big-image big-image big-image big-image"
+  ". . big-image big-image big-image big-image";
+}
+
+.expand-2 {
+  grid-template-areas:
+  "small-image small-image small-image small-image . ."
+  "small-image small-image small-image small-image big-image big-image"
+  "small-image small-image small-image small-image big-image big-image"
+  "small-image small-image small-image small-image . .";
 }
 
 .small-image {
@@ -116,4 +138,16 @@ label[for="color"]{
 #color{
   width: 0;
   height: 0;
+}
+
+button{
+  padding: 18px 30px 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(163, 163, 163, 0.2);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  width: auto;
+  line-height: 1;
 }
